@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sciendo.Love2Playlist
+namespace Sciendo.Love2Playlist.Processor
 {
-    class Program
+    public interface ICoordinator
     {
-        static void Main(string[] args)
-        {
-        }
+        void GetLovedAndPersistPlaylist();
     }
 }

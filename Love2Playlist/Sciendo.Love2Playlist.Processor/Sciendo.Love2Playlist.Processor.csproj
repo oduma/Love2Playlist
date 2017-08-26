@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E970F0E-B53E-4E6B-AAD8-51C75FA6D29D}</ProjectGuid>
+    <ProjectGuid>{2E813849-0E59-4400-9BDB-FF4A2B898643}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sciendo.Love2Playlist.Tests.Unit</RootNamespace>
-    <AssemblyName>Sciendo.Love2Playlist.Tests.Unit</AssemblyName>
+    <RootNamespace>Sciendo.Love2Playlist.Processor</RootNamespace>
+    <AssemblyName>Sciendo.Love2Playlist.Processor</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,17 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataTypes\Artist.cs" />
+    <Compile Include="Coordinator.cs" />
+    <Compile Include="DataTypes\IArtist.cs" />
+    <Compile Include="ICoordinator.cs" />
+    <Compile Include="DataTypes\IImage.cs" />
+    <Compile Include="ILoveCollection.cs" />
+    <Compile Include="ILoveProvider.cs" />
+    <Compile Include="DataTypes\ILoveTrack.cs" />
+    <Compile Include="DataTypes\Image.cs" />
+    <Compile Include="IMapper.cs" />
+    <Compile Include="DataTypes\IStreamable.cs" />
+    <Compile Include="LoveCollection.cs" />
+    <Compile Include="DataTypes\LovePage.cs" />
+    <Compile Include="LoveProvider.cs" />
+    <Compile Include="DataTypes\LoveTrack.cs" />
+    <Compile Include="Page2CollectionMapper.cs" />
+    <Compile Include="DataTypes\PageInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sciendo.Love2Playlist.Processor\Sciendo.Love2Playlist.Processor.csproj">
-      <Project>{2e813849-0e59-4400-9bdb-ff4a2b898643}</Project>
-      <Name>Sciendo.Love2Playlist.Processor</Name>
-    </ProjectReference>
+    <Compile Include="DataTypes\Size.cs" />
+    <Compile Include="DataTypes\Streamable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

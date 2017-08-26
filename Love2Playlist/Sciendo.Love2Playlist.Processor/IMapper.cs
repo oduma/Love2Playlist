@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sciendo.Love2Playlist
+namespace Sciendo.Love2Playlist.Processor
 {
-    class Program
+    public interface IMapper<in TInput, out TOutput> 
     {
-        static void Main(string[] args)
-        {
-        }
+        TOutput Map(TInput page);
     }
 }
